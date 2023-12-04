@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My TCIS</title>
+    <link rel="icon" type="image/x-icon" href="Asset/New Project (1).png">
+    <link rel="stylesheet" href="Styleaaaa.css"></style>
+</head>
+
+<body onload="checkUserStatus()">
+    <div class="blacktab">
+        <h1 class = "WebsiteLogo" onclick="Home()">
+            <span class="MY">My</span><span class="T">T</span><span class="CIS">CIS</span>
+        </h1>	
+        <h2 id="Contact" onclick="">
+            Contact Us
+        </h2>
+        <h2 id = "Search" onclick="DirectToSearch()">
+            Search
+        </h2>
+        <h2 id = "Add" onclick="DirectToAdd()">
+            Add
+        </h2>
+    </div>
+    <div id="banner" >
+        <h1 id="logo">
+            <span class="MY">My</span><span class="T">T</span><span class="CIS">CIS</span>
+        </h1>
+        <div id="LoginContainer">
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <button type="submit" onclick="login()" >Sign in</button>
+            </form>
+        </div>
+        <div id="Greeting">
+            <p id="Greet">Greeting, Your Name.</p>
+            <!-- <div class="break"></div> -->
+            <p id="Greet">What would you like to do today?</p>
+            <button type="button" class="FunctionButton" onclick="DirectToAdd()" >
+                <img class="Icon" src="Asset/Add.png" alt="">
+                <p>Add new patience</p>
+            </button>
+            <button type="button" class="FunctionButton" onclick="DirectToSearch()">
+                <img class="Icon" src="Asset/Search.png" alt="">
+                <p>Search for patience</p>
+            </button>
+        </div>
+    </div>
+</body>
+<script src="Script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>>
+</html>

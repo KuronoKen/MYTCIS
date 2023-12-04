@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Infostyles.css">
+    <title>Patient Information</title>
+    <link rel="icon" type="image/x-icon" href="Asset/New Project (1).png">
+</head>
+<body onload="GetInfo()">
+
+    <div class="blacktab">
+        <h1 id = "WebsiteLogo" onclick="Home()">
+            MYTCIS
+        </h1>	
+        <h2 id="Contact" onclick="">
+            Contact Us
+        </h2>
+        <h2 id = "Search" onclick="DirectToSearch()">
+            Search
+        </h2>
+        <h2 id = "Add" onclick="DirectToAdd()">
+            Add
+        </h2>
+    </div>
+
+    <div class="patient-container">
+        <h1>Patient Information</h1>
+
+        <div class="patient-form">
+            <div>
+                <label id="patientName" for="patientName">Name:</label>
+
+                <label id="patientSex" for="patientSex">Sex:</label>
+
+                <label id="patientAge" for="patientAge">Age:</label>
+
+                <label id="patientDateOfBirth" for="patientDateOfBirth">Date Of Birth:</label>
+        
+                <label id="patientEmail" for="patientEmail">Email:</label>
+
+                <label id="patientPhoneNumber" for="patientPhoneNumber">Phone Number:</label>
+
+                <label id="patientId" for="patientId">ID:</label>
+            </div>
+            
+            <div style="margin-left: 5%;">
+                <label id="FoodAllergy" for="FoodAllergy">Foods allergy with symptoms:</label>
+                <ul id="foodallergy"></ul>
+            </div>
+            
+            <div style="margin-left: 5%;">
+                <label id="DrugAllergy" for="DrugAllergy">Drugs allergy with symptoms:</label>
+            <ul id="drugallergy"></ul>
+            </div>
+            
+        </div>
+
+        <div id="patientDisplay" class="patient-card-container"></div>
+
+    </div>
+    <div id="Editor">
+        <h1 id="HeadLine">Add new event</h1>
+        
+            <div style="display: flex; min-height: 500px;">
+                <form id="addtimelineform" action="">
+                    <h2 style="margin-left: 2%; max-height:20px;" for="title">Title:</h2>
+                    <input class="InfoInput" type="text" id="title" placeholder="New Title"  name="title">
+                    
+                    <div class="infocontaindiv">
+                        <h4 style="margin-left: 2%; margin-bottom: 2%; max-height: 10%;" for="date">Date of event:</h4>
+                        <input class="InfoInput" type="date" id="date" name="date">
+                    </div>
+                    
+                    <div class="infocontaindiv">
+                        <h4 style="margin-left: 2%; margin-bottom: 2%; max-height: 10%;" for="time">Time of event:</h4>
+                        <input class="InfoInput" type="time" id="time" name="time">
+                    </div>
+                    
+                    <div class="infocontaindiv">
+                        <h4 style="margin-left: 2%; margin-bottom: 2%; max-height: 10%;" for="date">Date of next appointment:</h4>
+                        <input class="InfoInput" type="date" id="apdate" name="apdate">
+                    </div>
+                    
+                    <div class="infocontaindiv">
+                        <h4 style="margin-left: 2%; margin-bottom: 2%; max-height: 10%;" for="time">Time of next appointment:</h2>
+                        <input class="InfoInput" type="time" id="aptime" name="aptime">
+                    </div>
+
+                    <h2 style="margin-left: 2%; max-height: 1em;" for="category">Category:</h2>
+                    
+                    <select class="InfoInput" id="category" name="category" required>
+                        <option value="" disabled selected>Choose One</option>
+                        <option value="appointment">Appointment</option>
+                        <option value="self-visit">Self-visit</option>
+                        <option value="surgery">Surgery</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <div  class="infocontaindiv" style="margin-top: 3%;">
+                        <h4 style="margin-left: 2%; margin-top: 2%; margin-bottom: 1%;" for="description">Description:</h4>
+                        <textarea class="TextArea" id="description" name="description" rows="4" cols="50" required></textarea>
+                    </div>
+                    <div  class="infocontaindiv">
+                        <h4 style="margin-left: 2%; margin-top: 2%; margin-bottom: 1%;" for="medicine">Medicine Given:</h4>
+                        <textarea class="TextArea" id="medicine" name="medicine" rows="4" cols="50" required></textarea>
+                    </div>
+                </form>
+            </div>
+            <button onclick="savetimeline()" type="button" id="AddPlus">Add</button>
+            <button onclick="closeeditor()" type="button" id="Close">Close</button>
+        
+            
+    </div>
+    <div id="TimelineContainer" style=" margin-top: 30px;" class="patient-container">
+        <div id="Header" style="display: flex; width: 100%;">
+            <h1>Patient Timeline</h1>
+            <button onclick="AddPageOn()" id="AddTimeline">+</button>
+        </div>
+
+
+    </div>
+    <div id="EventDetail">
+        
+            <div style="display: flex; min-height: 500px; flex-direction: column;">
+                <h1 id="EventTitles">Title</h1>
+                    <div class="DetailContainer">
+                        <h4 >Event Date and Time:</h4>
+                        <h4 id="EventDates"></h4>
+                    </div>
+                    
+                    <div class="DetailContainer">
+                        <h4 >Next Appointment:</h4>
+                        <h4 id="EventAppointment"></h4>
+                    </div>
+                    
+                    <div class="DetailContainer">
+                        <h4> Recorded On:</h4>
+                        <h4 id="EventRecordTime"></h4>
+                    </div>
+                    
+                    <div class="DetailContainer">
+                        <h4 >Category:</h4>
+                        <h4 id="EventCategorys"></h4>
+                    </div>
+                    
+                    <div class="DetailContainer">
+                        <h4>Description:</h4>
+                        <h4 id="EventDescription"></h4>
+                    </div>
+                    
+                    <div class="DetailContainer">
+                        <h4>Medicine Given:</h4>
+                        <h4 id="EventMedicine"></h4>
+                    </div>
+                    
+                   
+
+            </div>
+            <button onclick="closedetail()" type="button" id="Close">Close</button>
+        
+            
+    </div>
+<script src="Infoscript.js"></script>
+</body>
+</html>

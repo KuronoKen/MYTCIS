@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patience Search</title>
+    <link rel="stylesheet" href="Add.Css"></style>
+    <link rel="icon" type="image/x-icon" href="Asset/New Project (1).png">
+    
+</head>
+<body onload="">
+    <div class="blacktab">
+        <h1 class = "WebsiteLogo" onclick="Home()">
+            MYTCIS
+        </h1>	
+        <h2 onclick="">
+            Contact Us
+        </h2>
+        <h2 id = "Search" onclick="DirectToSearch()">
+            Search
+        </h2>
+        <h2 id = "Add" onclick="DirectToAdd()">
+            Add
+        </h2>
+    </div>
+    <div id="TheForm">
+        <form action="" method="post" id="TheFormInstance">
+            <div class="box">
+                <label  for="name">Name:</label>
+                <input class="InfoInput" type="text" id="name" name="name" placeholder="Patience's name" required>
+            </div>
+            
+            <div class="box">
+                <label for="surname">Surname:</label>
+                <input class="InfoInput" type="text" id="surname" name="surname" placeholder="Patience's surname" required>
+            </div>
+            
+            <div class="box">
+                <label for="sex">Sex:</label>
+                <select class="InfoInput" id="sex" name="sex" required>
+                    <option value="" disabled selected>Choose One</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="box">
+                <label for="birthday">Date Of Birth:</label>
+                <input class="InfoInput" type="date" id="birthday" name="birthday">
+            </div>
+            
+            <div class="box">
+                <label for="email">Email:</label>
+                <input class="InfoInput" type="email" id="email" name="email" placeholder="Patience's email" required>
+            </div>
+            
+            <div class="box">
+                <label for="phone">Phone Number:</label>
+                <input class="InfoInput" type="tel" id="phone" name="phone" pattern="[0]{1}[6-9]{1}[0-9]{1}-[0-9]{3}-[0-9]{4}" placeholder="XXX-XXX-XXXX" oninput="formatPhoneNumber()" maxlength="12" required>
+
+            </div>
+            
+            <div class="box">
+                <label for="socialid">ID:</label>
+                <input class="InfoInput" type="text" id="socialid" name="socialid" pattern="[0-9]{1}-[0-9]{4}-[0-9]{5}-[0-9]{2}-[0-9]{1}" oninput="formatID()" placeholder="X-XXXX-XXXXX-XX-X" maxlength="17" required>
+
+            </div>
+            <div id="DetailBox">
+                <div class="BoxForList">
+                    <label for="foodallergy">Food Allergy:</label>
+                    <div>
+                        
+                        <input class="ListInput" type="text" id="foodallergy" placeholder="Add one then 'Enter'"  name="foodallergy">
+                        <ul id="allergylist" class="List">
+                        </ul>
+                    </div>
+                </div>
+                <div class="BoxForList">
+                    <label for="drugallergy">Drug Allergy:</label>
+                    <div>
+                        
+                        <input class="ListInput" type="text" id="drugallergy" placeholder="Add one then 'Enter'"  name="drugallergy">
+                        <ul id="druglist" class="List">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="Editor">
+                <h1 id="HeadLine">Allergy</h1>
+                    <div style="display: flex;">
+                        <label style="margin-left: 2%;" for="symptoms">Symptoms:</label>
+                        <div >
+                            <input class="ListInput" type="text" id="symptoms" placeholder="Add one then 'Enter'"  name="symptoms">
+                            <ul id="symptomslist" class="List">
+                            </ul>
+                        
+                        </div>
+                    </div>
+                <button onclick="closeeditor()" type="button" id="Close">Close</button>
+            </div>
+           
+    
+    
+            <input id="summit" type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+<script src="Add.js"></script>
+</html>
+

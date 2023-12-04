@@ -1,0 +1,207 @@
+@font-face {
+    font-family: AgencyFB;
+    src:url(Asset/AGENCYR.TTF);
+    font-weight: bold;
+}
+@font-face {
+    font-family: Mitr;
+    src: url(Asset/Mitr-Regular.ttf);
+    font-weight: normal;
+}
+
+/* UpperTab */
+
+
+
+.blacktab {
+    background-color: rgb(0, 151, 116);
+    width:100%;
+    height:80px;
+    font-family: 'Trebuchet MS'; /* */
+    position: fixed;
+    display: flex;
+    flex-direction: row-reverse;
+    
+    left:0%;
+    top:0%;
+    opacity: 0.85;
+    color: white;
+    z-index: 4;
+    transition: opacity 0.5s;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2); /* Add a custom box shadow for focus */
+}
+.blacktab>h1 {
+    position: absolute;
+    left: 2% ;
+    opacity: 1;
+    z-index: 5;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.blacktab>h2 { /*Contact*/
+    color: white;
+    position: relative;
+    top: 13%;
+    opacity: 1;
+    z-index: 5;
+    margin-right: 3%;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.blacktab:hover {
+    opacity: 1;
+}
+.WebsiteLogo:hover{
+    cursor: pointer;
+    text-shadow: 0 0 10px white; 
+}
+
+.blacktab>h2:hover{
+    cursor: pointer;
+    text-shadow: 0 0 10px white; 
+}
+
+#TheForm{
+    position: absolute;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 151, 116, 0.788);
+    width: 60%;
+    min-height: 77.5%;
+    height: max-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-42.5%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.457);
+}
+
+body { 
+    min-height: max-content; 
+    background-image: url(Asset/received_215690058238489.png);
+}
+
+/*Form*/
+form{
+    font-family: 'Trebuchet MS';
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.InfoInput{
+    color: rgba(0, 126, 97, 1);;
+    font-family: 'Trebuchet MS';
+    border: none;
+    border-radius: 0.25em;
+    margin-left: 2%;
+    margin-right: 2%;
+    min-width: max-content;
+    font-size: large;
+}
+
+label{
+    margin-left: 1%;
+    min-width: max-content;
+}
+
+*:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2); /* Add a custom box shadow for focus */
+}
+
+#summit{
+    color: rgba(0, 151, 116, 0.788);;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    margin: 1%;
+    padding: 1%;
+    border: none;
+    font-size:20px;
+    border-radius: 1em;
+    font-family: 'Trebuchet MS';
+}
+
+.box{
+    display: flex;
+    margin-top: 2%;
+    margin-left: 1%;
+    margin-right: 2%;
+    width: max-content;
+    height: min-content;
+}
+
+#DetailBox{
+    display: flex;
+    width: 70%;
+    margin-left: 0.2%;
+    height: fit-content;
+    
+}
+
+.BoxForList{
+    margin-top: 2%;
+    margin-left: 1%;
+    display: flex;
+
+}
+
+.ListInput{
+    color: rgba(0, 151, 116, 1);;
+    font-family: 'Trebuchet MS';
+    border: none;
+    border-radius: 0.25em;
+    margin-left: 2%;
+
+    min-width: max-content;
+    font-size: large;
+    padding: 0.5em;
+}
+
+.List{
+    margin-top: 4%;
+}
+#allergylist{
+    cursor: pointer;
+}
+#Editor{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    height: 80%;
+    background-color: rgba(0, 255, 255, 0.642);
+    backdrop-filter: blur(10px);
+    min-height: max-content;
+    display: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.457);
+}
+#HeadLine{
+    position: relative;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    width: max-content;
+}
+#symptomslist{
+    position: relative;
+    width: min-content;
+    margin: 0;
+}
+
+#Close{
+    color: rgba(0, 151, 116, 0.788);;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    margin: 1%;
+    padding: 1%;
+    border: none;
+    font-size:20px;
+    border-radius: 1em;
+    font-family: 'Trebuchet MS';
+}

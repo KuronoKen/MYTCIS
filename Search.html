@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Search</title>
+    <link rel="stylesheet" href="Search.css"></style>
+    <link rel="icon" type="image/x-icon" href="Asset/New Project (1).png">
+    
+</head>
+<body onload="checkUserSearch()">
+    <div class="blacktab">
+        <h1 class = "WebsiteLogo" onclick="Home()">
+            MYTCIS
+        </h1>	
+        <h2 onclick="">
+            Contact Us
+        </h2>
+        <h2 id = "Search" onclick="DirectToSearch()">
+            Search
+        </h2>
+        <h2 id = "Add" onclick="DirectToAdd()">
+            Add
+        </h2>
+    </div>
+    <div id="banner" >
+        <h1 id="logo">
+            MYTCIS
+        </h1>
+        <div id="LoginContainer">
+            <form id="SearchForm">
+                <label for="ID">Patience ID:</label>
+                <input class="InfoInput" type="text" id="ID" name="ID" pattern="[0-9]{1}-[0-9]{4}-[0-9]{5}-[0-9]{2}-[0-9]{1}" oninput="formatID()" placeholder="X-XXXX-XXXXX-XX-X" maxlength="17" required>
+                <br>
+                <br>
+                <button id="Search" type="submit">Search</button>
+            </form>
+        </div>
+       
+    </div>
+    <h1 id="Username">
+        User : Guest
+    </h1>
+</body>
+<script src="Search.js"></script>
+</html>
+

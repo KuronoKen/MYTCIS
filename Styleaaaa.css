@@ -1,0 +1,265 @@
+@font-face {
+    font-family: AgencyFB;
+    src:url(Asset/AGENCYR.TTF);
+    font-weight: bold;
+}
+@font-face {
+    font-family: Mitr;
+    src: url(Asset/Mitr-Regular.ttf);
+    font-weight: normal;
+}
+
+*:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2); /* Add a custom box shadow for focus */
+}
+
+/* UpperTab */
+
+.blacktab {
+    background-color: rgb(0, 151, 116);
+    width:100%;
+    height:80px;
+    font-family: 'Trebuchet MS'; /* */
+    position: fixed;
+    display: flex;
+    flex-direction: row-reverse;
+    left:0%;
+    top:0%;
+    color: white;
+    z-index: 4;
+    opacity: 0.8;
+    transition: all 0.5s;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2); /* Add a custom box shadow for focus */
+}
+
+
+
+.blacktab>h1 {
+    position: absolute;
+    left: 2% ;
+    opacity: 1;
+    z-index: 5;
+    transition: all 0.8s;
+    cursor: pointer;
+    font-size: 40px;
+    margin: 0px;
+    padding-top: 1%;
+    
+}
+.blacktab>h2 { /*Contact*/
+    color: white;
+    position: relative;
+    top: 13%;
+    opacity: 1;
+    z-index: 5;
+    margin-right: 3%;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.blacktab:hover {
+    opacity: 0.9;
+    backdrop-filter: blur(10px);
+}
+.WebsiteLogo:hover{
+    cursor: pointer;
+    text-shadow: 0 0 10px white; 
+}
+#Banner:hover{
+    opacity: 1;
+}
+#realbox:hover{
+    opacity: 1;
+}
+
+.blacktab>h2:hover{
+    cursor: pointer;
+    text-shadow: 0 0 10px white; 
+}
+
+.MY{
+    color: rgb(7, 66, 89);
+}
+
+.T{
+    color: red;
+}
+
+
+/* Background */
+body{
+    background-image: url("https://c0.wallpaperflare.com/preview/77/506/328/medical-health-doctor.jpg");
+    background-size:cover;
+    transition: all 0.4s;
+    background-size: 100%;
+}
+
+/*Banner*/
+#banner{
+    background-color: rgba(0, 143, 110, 0.642);
+    width: 35%;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-45%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.457);
+    backdrop-filter: blur(5px);
+    transition: all 0.8s;
+}
+#banner:hover{
+    backdrop-filter: blur(10px);
+}
+
+button:hover{
+    box-shadow: black;
+    box-shadow: 10px 10px 8px;
+    
+}
+
+#logo{
+    font-family: 'Trebuchet MS';
+    color: rgb(235, 235, 235);
+    position: relative;
+    font-size: 13vh;
+    margin: 3%;
+    top: 5%;
+    text-align: center;
+    transition: all 0.4s;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+}
+
+/*Log In*/
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: none;
+    box-sizing: border-box;
+    font-size: 2.8vh;
+    font-family: 'Trebuchet MS','Mitr';
+    border-radius: 5px;
+}
+
+#login-form>button {
+    background-color: #ffffff;
+    font-family: 'Trebuchet MS';
+    font-weight:bold;
+    color: rgba(0, 143, 110, 0.632);
+    margin-top: 3vh;
+    font-size: 3vh;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: .2s;
+
+}
+
+label{
+    color: rgb(255, 255, 255);
+    font-family: 'Trebuchet MS','Mitr';
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+#LoginContainer{
+    margin: auto;   
+    position: relative;
+    background-color: #ffffff00;
+    top: 7.5%;
+    width: 80%;
+    height:auto;
+}
+
+#Greeting{
+    margin: auto; 
+    position: relative;  
+    background-color: #ffffff00;
+    width: 90%;
+    height:60%;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    transition: all 0.4s;
+}
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+#Greeting>p{
+    color: #ffffff;
+    font-family: 'Trebuchet MS';
+    font-weight:bold; 
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+    justify-self: center;
+    width: 100%;
+}
+
+
+.FunctionButton{
+    position: relative;
+    width: 40%;
+    top: 5%;
+    margin: 0;
+    height: 0;
+    padding-top: 39%;
+    background-color: rgba(255, 255, 255, 0.84);
+    border: none;
+    cursor: pointer;
+    color: rgba(0, 143, 110, 0.642);
+    font-family: 'Trebuchet MS';
+    font-weight:bold; 
+    font-size: 1.2em;
+    transition: .2s;
+}   
+
+.FunctionButton>p{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    margin: 0px;
+    margin-bottom: 3%;
+    transform: translateX(-50%);
+}
+.Icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: auto;
+    margin: 0px;
+    transform: translate(-50%, -65%);
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media screen and (max-width: 1300px) {
+    #logo{
+        font-size: 40px;
+    }    
+}
+
+@media screen and (max-width: 1300px) {
+    p#Greet{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #banner{
+        width: 450px;
+        height: auto;
+    }
+}

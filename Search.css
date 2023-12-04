@@ -1,0 +1,157 @@
+@font-face {
+    font-family: AgencyFB;
+    src:url(Asset/AGENCYR.TTF);
+    font-weight: bold;
+}
+@font-face {
+    font-family: Mitr;
+    src: url(Asset/Mitr-Regular.ttf);
+    font-weight: normal;
+}
+
+/* UpperTab */
+
+body{
+    background-image: url(Asset/received_215690058238489.png);
+    
+}
+
+.blacktab {
+    background-color: rgb(0, 151, 116);
+    width:100%;
+    height:80px;
+    font-family: 'Trebuchet MS'; /* */
+    position: fixed;
+    display: flex;
+    flex-direction: row-reverse;
+    
+    left:0%;
+    top:0%;
+    opacity: 0.85;
+    color: white;
+    z-index: 4;
+    transition: opacity 0.5s;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2); /* Add a custom box shadow for focus */
+}
+.blacktab>h1 {
+    position: absolute;
+    left: 2% ;
+    opacity: 1;
+    z-index: 5;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.blacktab>h2 { /*Contact*/
+    color: white;
+    position: relative;
+    top: 13%;
+    opacity: 1;
+    z-index: 5;
+    margin-right: 3%;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.blacktab:hover {
+    opacity: 1;
+}
+.WebsiteLogo:hover{
+    cursor: pointer;
+    text-shadow: 0 0 10px white; 
+}
+.blacktab>h2:hover{
+    cursor: pointer;
+    text-shadow: 0 0 10px white; 
+}
+
+*:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2); /* Add a custom box shadow for focus */
+}
+
+/*Banner*/
+#banner{
+    background-color: rgba(0, 143, 110, 0.642);
+    width: 35%;
+    height: 45vh;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    left: 50%;
+    backdrop-filter: blur(5px);
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.457);
+    transition: all 0.8s;
+}
+
+#banner:hover{
+    backdrop-filter: blur(10px);
+}
+#logo{
+    font-family: 'Trebuchet MS';
+    color: rgb(235, 235, 235);
+    position: relative;
+    font-size: 13vh;
+    margin: 5%;
+    top: 5%;
+    text-align: center;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    transition: all 0.8s;
+}
+
+#logo:hover{
+    text-shadow: 0 0 10px white; 
+}
+
+/*Log In*/
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: none;
+    box-sizing: border-box;
+    font-size: 2.8vh;
+    font-family: 'Trebuchet MS','Mitr';
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ffffff;
+    font-family: 'Trebuchet MS';
+    font-weight:bold;
+    color: rgba(0, 143, 110, 0.632);
+    font-size: 3vh;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+}
+
+label{
+    color: rgb(255, 255, 255);
+    font-family: 'Trebuchet MS','Mitr';
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+#LoginContainer{
+    margin: auto;   
+    position: relative;
+    background-color: #00000000;
+    width: 80%;
+    height:auto;
+}
+
+#Username{
+    color: #ffffff;
+    font-family: 'Trebuchet MS';
+    font-weight:bold; 
+    font-size: 2em;
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+}
